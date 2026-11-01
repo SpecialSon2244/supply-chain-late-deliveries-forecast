@@ -1,0 +1,1011 @@
+{
+ "q1_overall": [
+  {
+   "order_lines": 180519,
+   "orders": 65752,
+   "shipped_lines": 172765,
+   "late_lines": 98977,
+   "cancelled_lines": 7754,
+   "late_pct_of_shipped": 57.3,
+   "late_pct_of_all_lines": 54.8,
+   "late_pct_of_shipped_orders": 57.3,
+   "avg_days_scheduled": 2.93,
+   "avg_days_actual": 3.5,
+   "avg_days_late_when_late": 1.62
+  }
+ ],
+ "q1_by_mode": [
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "shipped_lines": 9293,
+   "share_of_shipped_pct": 5.4,
+   "late_lines": 4454,
+   "late_pct": 47.9,
+   "avg_days_actual": 0.48,
+   "min_days_actual": 0,
+   "max_days_actual": 1,
+   "avg_days_late_when_late": 1.0,
+   "share_of_all_late_pct": 4.5
+  },
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "shipped_lines": 26513,
+   "share_of_shipped_pct": 15.3,
+   "late_lines": 26513,
+   "late_pct": 100.0,
+   "avg_days_actual": 2.0,
+   "min_days_actual": 2,
+   "max_days_actual": 2,
+   "avg_days_late_when_late": 1.0,
+   "share_of_all_late_pct": 26.8
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "shipped_lines": 33806,
+   "share_of_shipped_pct": 19.6,
+   "late_lines": 26987,
+   "late_pct": 79.8,
+   "avg_days_actual": 3.99,
+   "min_days_actual": 2,
+   "max_days_actual": 6,
+   "avg_days_late_when_late": 2.5,
+   "share_of_all_late_pct": 27.3
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "shipped_lines": 103153,
+   "share_of_shipped_pct": 59.7,
+   "late_lines": 41023,
+   "late_pct": 39.8,
+   "avg_days_actual": 3.99,
+   "min_days_actual": 2,
+   "max_days_actual": 6,
+   "avg_days_late_when_late": 1.51,
+   "share_of_all_late_pct": 41.4
+  }
+ ],
+ "q1_by_market": [
+  {
+   "market": "Europe",
+   "shipped_lines": 48090,
+   "late_pct": 57.7,
+   "first_order_month": "2015-05",
+   "last_order_month": "2017-11"
+  },
+  {
+   "market": "USCA",
+   "shipped_lines": 24627,
+   "late_pct": 57.4,
+   "first_order_month": "2016-04",
+   "last_order_month": "2017-01"
+  },
+  {
+   "market": "Pacific Asia",
+   "shipped_lines": 39585,
+   "late_pct": 57.4,
+   "first_order_month": "2015-10",
+   "last_order_month": "2018-01"
+  },
+  {
+   "market": "LATAM",
+   "shipped_lines": 49309,
+   "late_pct": 56.9,
+   "first_order_month": "2015-01",
+   "last_order_month": "2017-06"
+  },
+  {
+   "market": "Africa",
+   "shipped_lines": 11154,
+   "late_pct": 56.8,
+   "first_order_month": "2016-08",
+   "last_order_month": "2017-01"
+  }
+ ],
+ "q1_by_region_spread": [
+  {
+   "regions": 23,
+   "min_late_pct": 51.6,
+   "max_late_pct": 60.1,
+   "best_region": "Canada",
+   "worst_region": "Central Africa"
+  }
+ ],
+ "q1_by_category": [
+  {
+   "category_name": "Accessories",
+   "shipped_lines": 1697,
+   "late_pct": 59.8,
+   "late_rank": 1
+  },
+  {
+   "category_name": "Electronics",
+   "shipped_lines": 3024,
+   "late_pct": 58.5,
+   "late_rank": 2
+  },
+  {
+   "category_name": "Golf Gloves",
+   "shipped_lines": 1029,
+   "late_pct": 58.5,
+   "late_rank": 3
+  },
+  {
+   "category_name": "Girls' Apparel",
+   "shipped_lines": 1137,
+   "late_pct": 58.4,
+   "late_rank": 4
+  },
+  {
+   "category_name": "Shop By Sport",
+   "shipped_lines": 10515,
+   "late_pct": 57.6,
+   "late_rank": 5
+  },
+  {
+   "category_name": "Cleats",
+   "shipped_lines": 23514,
+   "late_pct": 57.4,
+   "late_rank": 6
+  },
+  {
+   "category_name": "Golf Balls",
+   "shipped_lines": 1403,
+   "late_pct": 57.4,
+   "late_rank": 7
+  },
+  {
+   "category_name": "Fishing",
+   "shipped_lines": 16595,
+   "late_pct": 57.3,
+   "late_rank": 8
+  },
+  {
+   "category_name": "Water Sports",
+   "shipped_lines": 14880,
+   "late_pct": 57.2,
+   "late_rank": 9
+  },
+  {
+   "category_name": "Indoor/Outdoor Games",
+   "shipped_lines": 18470,
+   "late_pct": 57.2,
+   "late_rank": 10
+  },
+  {
+   "category_name": "Women's Apparel",
+   "shipped_lines": 20116,
+   "late_pct": 57.0,
+   "late_rank": 11
+  },
+  {
+   "category_name": "Men's Footwear",
+   "shipped_lines": 21263,
+   "late_pct": 57.0,
+   "late_rank": 12
+  },
+  {
+   "category_name": "Cardio Equipment",
+   "shipped_lines": 11948,
+   "late_pct": 57.0,
+   "late_rank": 13
+  },
+  {
+   "category_name": "Camping & Hiking",
+   "shipped_lines": 13157,
+   "late_pct": 56.9,
+   "late_rank": 14
+  }
+ ],
+ "q1_schedule_vs_actual": [
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "days_actual": 0,
+   "lines": 4839,
+   "is_late": false,
+   "share_of_mode_pct": 52.07,
+   "cum_share_of_mode_pct": 52.07
+  },
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "days_actual": 1,
+   "lines": 4454,
+   "is_late": true,
+   "share_of_mode_pct": 47.93,
+   "cum_share_of_mode_pct": 100.0
+  },
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "days_actual": 2,
+   "lines": 26513,
+   "is_late": true,
+   "share_of_mode_pct": 100.0,
+   "cum_share_of_mode_pct": 100.0
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "days_actual": 2,
+   "lines": 6819,
+   "is_late": false,
+   "share_of_mode_pct": 20.17,
+   "cum_share_of_mode_pct": 20.17
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "days_actual": 3,
+   "lines": 6759,
+   "is_late": true,
+   "share_of_mode_pct": 19.99,
+   "cum_share_of_mode_pct": 40.16
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "days_actual": 4,
+   "lines": 6759,
+   "is_late": true,
+   "share_of_mode_pct": 19.99,
+   "cum_share_of_mode_pct": 60.16
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "days_actual": 5,
+   "lines": 6772,
+   "is_late": true,
+   "share_of_mode_pct": 20.03,
+   "cum_share_of_mode_pct": 80.19
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "days_actual": 6,
+   "lines": 6697,
+   "is_late": true,
+   "share_of_mode_pct": 19.81,
+   "cum_share_of_mode_pct": 100.0
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "days_actual": 2,
+   "lines": 20873,
+   "is_late": false,
+   "share_of_mode_pct": 20.23,
+   "cum_share_of_mode_pct": 20.23
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "days_actual": 3,
+   "lines": 20719,
+   "is_late": false,
+   "share_of_mode_pct": 20.09,
+   "cum_share_of_mode_pct": 40.32
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "days_actual": 4,
+   "lines": 20538,
+   "is_late": false,
+   "share_of_mode_pct": 19.91,
+   "cum_share_of_mode_pct": 60.23
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "days_actual": 5,
+   "lines": 20231,
+   "is_late": true,
+   "share_of_mode_pct": 19.61,
+   "cum_share_of_mode_pct": 79.84
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "days_actual": 6,
+   "lines": 20792,
+   "is_late": true,
+   "share_of_mode_pct": 20.16,
+   "cum_share_of_mode_pct": 100.0
+  }
+ ],
+ "q2_profit_by_status": [
+  {
+   "status_group": "Cancelled",
+   "lines": 7754,
+   "net_sales": 1409737.0,
+   "profit": 160482.0,
+   "share_of_profit_pct": 4.0,
+   "profit_margin_pct": 11.38,
+   "loss_lines_pct": 19.2
+  },
+  {
+   "status_group": "Late",
+   "lines": 98977,
+   "net_sales": 18082555.0,
+   "profit": 2140052.0,
+   "share_of_profit_pct": 53.9,
+   "profit_margin_pct": 11.83,
+   "loss_lines_pct": 18.7
+  },
+  {
+   "status_group": "On time or early",
+   "lines": 73788,
+   "net_sales": 13562110.0,
+   "profit": 1666369.0,
+   "share_of_profit_pct": 42.0,
+   "profit_margin_pct": 12.29,
+   "loss_lines_pct": 18.6
+  }
+ ],
+ "q2_profit_at_risk": [
+  {
+   "total_profit": 3966903.0,
+   "late_profit": 2140052.0,
+   "cancelled_profit": 160482.0,
+   "suspected_fraud_profit": 85137.0,
+   "profit_at_risk": 2300534.0,
+   "profit_at_risk_pct": 58.0,
+   "net_sales_at_risk": 19492293.0,
+   "losses_on_loss_lines": 3883547.0,
+   "loss_lines_pct": 18.7
+  }
+ ],
+ "q2_late_profit_by_mode": [
+  {
+   "shipping_mode": "Standard Class",
+   "late_profit": 874634.0,
+   "share_of_late_profit_pct": 40.9
+  },
+  {
+   "shipping_mode": "First Class",
+   "late_profit": 616597.0,
+   "share_of_late_profit_pct": 28.8
+  },
+  {
+   "shipping_mode": "Second Class",
+   "late_profit": 564534.0,
+   "share_of_late_profit_pct": 26.4
+  },
+  {
+   "shipping_mode": "Same Day",
+   "late_profit": 84287.0,
+   "share_of_late_profit_pct": 3.9
+  }
+ ],
+ "q2_discount_bands": [
+  {
+   "discount_band": "0%",
+   "min_rate": 0.0,
+   "max_rate": 0.0,
+   "lines": 10028,
+   "gross_sales": 2042369.18,
+   "discount_amount": 0.0,
+   "profit": 267412.4,
+   "profit_pct_of_gross": 13.09,
+   "profit_pct_of_net": 13.09,
+   "loss_lines_pct": 18.38
+  },
+  {
+   "discount_band": "1-5%",
+   "min_rate": 0.01,
+   "max_rate": 0.05,
+   "lines": 50143,
+   "gross_sales": 10215745.81,
+   "discount_amount": 306523.06,
+   "profit": 1171682.08,
+   "profit_pct_of_gross": 11.47,
+   "profit_pct_of_net": 11.82,
+   "loss_lines_pct": 18.68
+  },
+  {
+   "discount_band": "6-10%",
+   "min_rate": 0.06,
+   "max_rate": 0.1,
+   "lines": 40116,
+   "gross_sales": 8173852.28,
+   "discount_amount": 643742.6,
+   "profit": 926511.63,
+   "profit_pct_of_gross": 11.34,
+   "profit_pct_of_net": 12.3,
+   "loss_lines_pct": 18.37
+  },
+  {
+   "discount_band": "11-15%",
+   "min_rate": 0.12,
+   "max_rate": 0.15,
+   "lines": 30087,
+   "gross_sales": 6131787.49,
+   "discount_amount": 817610.24,
+   "profit": 625339.12,
+   "profit_pct_of_gross": 10.2,
+   "profit_pct_of_net": 11.77,
+   "loss_lines_pct": 18.95
+  },
+  {
+   "discount_band": "16-20%",
+   "min_rate": 0.16,
+   "max_rate": 0.2,
+   "lines": 40116,
+   "gross_sales": 8176657.89,
+   "discount_amount": 1451398.93,
+   "profit": 784061.02,
+   "profit_pct_of_gross": 9.59,
+   "profit_pct_of_net": 11.66,
+   "loss_lines_pct": 19.07
+  },
+  {
+   "discount_band": "25%",
+   "min_rate": 0.25,
+   "max_rate": 0.25,
+   "lines": 10029,
+   "gross_sales": 2044322.38,
+   "discount_amount": 511103.57,
+   "profit": 191896.72,
+   "profit_pct_of_gross": 9.39,
+   "profit_pct_of_net": 12.52,
+   "loss_lines_pct": 18.48
+  }
+ ],
+ "q2_discount_correlation": [
+  {
+   "corr_discount_vs_profit_pct_gross": -0.023,
+   "corr_discount_vs_profit_pct_net": -0.003,
+   "min_profit_ratio": -2.75,
+   "max_profit_ratio": 0.5,
+   "distinct_discount_rates": 18,
+   "min_lines_per_rate": 10028,
+   "max_lines_per_rate": 10029
+  }
+ ],
+ "q2_discount_0_vs_25": [
+  {
+   "gross_sales_0pct": 2042369.18,
+   "gross_sales_25pct": 2044322.38,
+   "profit_0pct": 267412.4,
+   "profit_25pct": 191896.72,
+   "profit_change_pct": -28.2
+  }
+ ],
+ "q3_window": [
+  {
+   "first_week": "2015-01-05",
+   "last_week": "2017-09-25",
+   "break_week": "2017-10-02",
+   "last_week_in_file": "2018-01-29",
+   "avg_lines_per_week_before": 1199.0,
+   "lines_per_order_before": 3.0,
+   "avg_lines_per_week_after": 480.0,
+   "lines_per_order_after": 1.0,
+   "lines_excluded_after_break": 8392
+  }
+ ],
+ "q3_annual_units": [
+  {
+   "year": 2015,
+   "units_jan_sep": 103524,
+   "yoy_jan_sep_pct": null,
+   "units_full_year_in_file": 138480
+  },
+  {
+   "year": 2016,
+   "units_jan_sep": 102149,
+   "yoy_jan_sep_pct": -1.3,
+   "units_full_year_in_file": 137352
+  },
+  {
+   "year": 2017,
+   "units_jan_sep": 99455,
+   "yoy_jan_sep_pct": -2.6,
+   "units_full_year_in_file": 106124
+  },
+  {
+   "year": 2018,
+   "units_jan_sep": 2123,
+   "yoy_jan_sep_pct": -97.9,
+   "units_full_year_in_file": 2123
+  }
+ ],
+ "q3_volatility": [
+  {
+   "category_name": "Shop By Sport",
+   "avg_weekly_units": 228.0,
+   "sd_weekly_units": 28.0,
+   "cv_pct": 12.3
+  },
+  {
+   "category_name": "Cardio Equipment",
+   "avg_weekly_units": 262.0,
+   "sd_weekly_units": 29.9,
+   "cv_pct": 11.4
+  },
+  {
+   "category_name": "Indoor/Outdoor Games",
+   "avg_weekly_units": 403.0,
+   "sd_weekly_units": 41.0,
+   "cv_pct": 10.2
+  },
+  {
+   "category_name": "Water Sports",
+   "avg_weekly_units": 108.0,
+   "sd_weekly_units": 10.9,
+   "cv_pct": 10.1
+  },
+  {
+   "category_name": "Fishing",
+   "avg_weekly_units": 121.0,
+   "sd_weekly_units": 11.9,
+   "cv_pct": 9.9
+  },
+  {
+   "category_name": "Women's Apparel",
+   "avg_weekly_units": 439.0,
+   "sd_weekly_units": 41.7,
+   "cv_pct": 9.5
+  },
+  {
+   "category_name": "Men's Footwear",
+   "avg_weekly_units": 155.0,
+   "sd_weekly_units": 14.7,
+   "cv_pct": 9.5
+  },
+  {
+   "category_name": "Cleats",
+   "avg_weekly_units": 513.0,
+   "sd_weekly_units": 40.5,
+   "cv_pct": 7.9
+  }
+ ],
+ "q3_forecast_accuracy": [
+  {
+   "series": "All categories",
+   "model": "ETS, AICc-selected: ETS(A,N,N)",
+   "wape_pct": 2.88,
+   "mape_pct": 2.86,
+   "bias_pct": 0.31
+  },
+  {
+   "series": "All categories",
+   "model": "Naive (last week)",
+   "wape_pct": 3.14,
+   "mape_pct": 3.14,
+   "bias_pct": 1.14
+  },
+  {
+   "series": "All categories",
+   "model": "4-week moving average",
+   "wape_pct": 3.38,
+   "mape_pct": 3.28,
+   "bias_pct": -3.29
+  },
+  {
+   "series": "All categories",
+   "model": "Seasonal naive (same week last year)",
+   "wape_pct": 6.81,
+   "mape_pct": 6.96,
+   "bias_pct": 6.66
+  },
+  {
+   "series": "Cardio Equipment",
+   "model": "ETS, AICc-selected: ETS(A,N,N)",
+   "wape_pct": 8.69,
+   "mape_pct": 8.33,
+   "bias_pct": -5.73
+  },
+  {
+   "series": "Cardio Equipment",
+   "model": "Naive (last week)",
+   "wape_pct": 8.83,
+   "mape_pct": 8.45,
+   "bias_pct": -6.09
+  },
+  {
+   "series": "Cardio Equipment",
+   "model": "4-week moving average",
+   "wape_pct": 10.46,
+   "mape_pct": 9.86,
+   "bias_pct": -9.67
+  },
+  {
+   "series": "Cardio Equipment",
+   "model": "Seasonal naive (same week last year)",
+   "wape_pct": 10.58,
+   "mape_pct": 10.67,
+   "bias_pct": -0.18
+  },
+  {
+   "series": "Cleats",
+   "model": "ETS, AICc-selected: ETS(A,N,N)",
+   "wape_pct": 5.32,
+   "mape_pct": 5.3,
+   "bias_pct": 0.48
+  },
+  {
+   "series": "Cleats",
+   "model": "Naive (last week)",
+   "wape_pct": 5.72,
+   "mape_pct": 5.5,
+   "bias_pct": -3.52
+  },
+  {
+   "series": "Cleats",
+   "model": "Seasonal naive (same week last year)",
+   "wape_pct": 7.01,
+   "mape_pct": 7.03,
+   "bias_pct": 1.38
+  },
+  {
+   "series": "Cleats",
+   "model": "4-week moving average",
+   "wape_pct": 10.11,
+   "mape_pct": 9.73,
+   "bias_pct": -10.03
+  },
+  {
+   "series": "Indoor/Outdoor Games",
+   "model": "Naive (last week)",
+   "wape_pct": 6.26,
+   "mape_pct": 6.41,
+   "bias_pct": -0.81
+  },
+  {
+   "series": "Indoor/Outdoor Games",
+   "model": "4-week moving average",
+   "wape_pct": 8.07,
+   "mape_pct": 7.96,
+   "bias_pct": -5.53
+  },
+  {
+   "series": "Indoor/Outdoor Games",
+   "model": "ETS, AICc-selected: ETS(A,N,A) s=52",
+   "wape_pct": 12.49,
+   "mape_pct": 13.06,
+   "bias_pct": 4.04
+  },
+  {
+   "series": "Indoor/Outdoor Games",
+   "model": "Seasonal naive (same week last year)",
+   "wape_pct": 13.63,
+   "mape_pct": 13.76,
+   "bias_pct": 2.48
+  },
+  {
+   "series": "Shop By Sport",
+   "model": "ETS, AICc-selected: ETS(A,N,N)",
+   "wape_pct": 7.36,
+   "mape_pct": 7.66,
+   "bias_pct": 1.51
+  },
+  {
+   "series": "Shop By Sport",
+   "model": "4-week moving average",
+   "wape_pct": 7.39,
+   "mape_pct": 7.66,
+   "bias_pct": 1.03
+  },
+  {
+   "series": "Shop By Sport",
+   "model": "Naive (last week)",
+   "wape_pct": 9.35,
+   "mape_pct": 9.99,
+   "bias_pct": 6.81
+  },
+  {
+   "series": "Shop By Sport",
+   "model": "Seasonal naive (same week last year)",
+   "wape_pct": 15.41,
+   "mape_pct": 15.29,
+   "bias_pct": -1.71
+  },
+  {
+   "series": "Women's Apparel",
+   "model": "4-week moving average",
+   "wape_pct": 6.44,
+   "mape_pct": 6.73,
+   "bias_pct": 2.04
+  },
+  {
+   "series": "Women's Apparel",
+   "model": "ETS, AICc-selected: ETS(A,N,N)",
+   "wape_pct": 6.57,
+   "mape_pct": 6.75,
+   "bias_pct": 0.36
+  },
+  {
+   "series": "Women's Apparel",
+   "model": "Seasonal naive (same week last year)",
+   "wape_pct": 8.24,
+   "mape_pct": 8.66,
+   "bias_pct": 4.58
+  },
+  {
+   "series": "Women's Apparel",
+   "model": "Naive (last week)",
+   "wape_pct": 15.77,
+   "mape_pct": 16.45,
+   "bias_pct": 15.77
+  }
+ ],
+ "q3_forecast_summary": [
+  {
+   "model": "ETS (AICc-selected)",
+   "avg_wape_pct": 7.22,
+   "wape_all_categories_pct": 2.88,
+   "series": 6
+  },
+  {
+   "model": "4-week moving average",
+   "avg_wape_pct": 7.64,
+   "wape_all_categories_pct": 3.38,
+   "series": 6
+  },
+  {
+   "model": "Naive (last week)",
+   "avg_wape_pct": 8.18,
+   "wape_all_categories_pct": 3.14,
+   "series": 6
+  },
+  {
+   "model": "Seasonal naive (same week last year)",
+   "avg_wape_pct": 10.28,
+   "wape_all_categories_pct": 6.81,
+   "series": 6
+  }
+ ],
+ "q3_future_total": [
+  {
+   "first_week": "2017-10-02",
+   "last_week": "2017-12-18",
+   "avg_weekly_units_forecast": 2463.0,
+   "avg_lower_80": 2330.0,
+   "avg_upper_80": 2596.0
+  }
+ ],
+ "q4_whatif_one_day": [
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "new_promise": 2,
+   "late_lines_now": 26513,
+   "late_lines_if": 0,
+   "late_lines_avoided": 26513,
+   "pct_of_all_late_avoided": 26.8,
+   "overall_late_pct_after": 41.9,
+   "rank": 1
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "new_promise": 5,
+   "late_lines_now": 41023,
+   "late_lines_if": 20792,
+   "late_lines_avoided": 20231,
+   "pct_of_all_late_avoided": 20.4,
+   "overall_late_pct_after": 45.6,
+   "rank": 2
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "new_promise": 3,
+   "late_lines_now": 26987,
+   "late_lines_if": 20228,
+   "late_lines_avoided": 6759,
+   "pct_of_all_late_avoided": 6.8,
+   "overall_late_pct_after": 53.4,
+   "rank": 3
+  },
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "new_promise": 1,
+   "late_lines_now": 4454,
+   "late_lines_if": 0,
+   "late_lines_avoided": 4454,
+   "pct_of_all_late_avoided": 4.5,
+   "overall_late_pct_after": 54.7,
+   "rank": 4
+  }
+ ],
+ "q4_whatif_full_grid": [
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "new_promise": 0,
+   "extra_days": 0,
+   "shipped_lines": 9293,
+   "late_lines_if": 4454,
+   "late_lines_avoided": 0
+  },
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "new_promise": 1,
+   "extra_days": 1,
+   "shipped_lines": 9293,
+   "late_lines_if": 0,
+   "late_lines_avoided": 4454
+  },
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "new_promise": 2,
+   "extra_days": 2,
+   "shipped_lines": 9293,
+   "late_lines_if": 0,
+   "late_lines_avoided": 4454
+  },
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "new_promise": 3,
+   "extra_days": 3,
+   "shipped_lines": 9293,
+   "late_lines_if": 0,
+   "late_lines_avoided": 4454
+  },
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "new_promise": 4,
+   "extra_days": 4,
+   "shipped_lines": 9293,
+   "late_lines_if": 0,
+   "late_lines_avoided": 4454
+  },
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "new_promise": 5,
+   "extra_days": 5,
+   "shipped_lines": 9293,
+   "late_lines_if": 0,
+   "late_lines_avoided": 4454
+  },
+  {
+   "shipping_mode": "Same Day",
+   "promised_days": 0,
+   "new_promise": 6,
+   "extra_days": 6,
+   "shipped_lines": 9293,
+   "late_lines_if": 0,
+   "late_lines_avoided": 4454
+  },
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "new_promise": 1,
+   "extra_days": 0,
+   "shipped_lines": 26513,
+   "late_lines_if": 26513,
+   "late_lines_avoided": 0
+  },
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "new_promise": 2,
+   "extra_days": 1,
+   "shipped_lines": 26513,
+   "late_lines_if": 0,
+   "late_lines_avoided": 26513
+  },
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "new_promise": 3,
+   "extra_days": 2,
+   "shipped_lines": 26513,
+   "late_lines_if": 0,
+   "late_lines_avoided": 26513
+  },
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "new_promise": 4,
+   "extra_days": 3,
+   "shipped_lines": 26513,
+   "late_lines_if": 0,
+   "late_lines_avoided": 26513
+  },
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "new_promise": 5,
+   "extra_days": 4,
+   "shipped_lines": 26513,
+   "late_lines_if": 0,
+   "late_lines_avoided": 26513
+  },
+  {
+   "shipping_mode": "First Class",
+   "promised_days": 1,
+   "new_promise": 6,
+   "extra_days": 5,
+   "shipped_lines": 26513,
+   "late_lines_if": 0,
+   "late_lines_avoided": 26513
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "new_promise": 2,
+   "extra_days": 0,
+   "shipped_lines": 33806,
+   "late_lines_if": 26987,
+   "late_lines_avoided": 0
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "new_promise": 3,
+   "extra_days": 1,
+   "shipped_lines": 33806,
+   "late_lines_if": 20228,
+   "late_lines_avoided": 6759
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "new_promise": 4,
+   "extra_days": 2,
+   "shipped_lines": 33806,
+   "late_lines_if": 13469,
+   "late_lines_avoided": 13518
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "new_promise": 5,
+   "extra_days": 3,
+   "shipped_lines": 33806,
+   "late_lines_if": 6697,
+   "late_lines_avoided": 20290
+  },
+  {
+   "shipping_mode": "Second Class",
+   "promised_days": 2,
+   "new_promise": 6,
+   "extra_days": 4,
+   "shipped_lines": 33806,
+   "late_lines_if": 0,
+   "late_lines_avoided": 26987
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "new_promise": 4,
+   "extra_days": 0,
+   "shipped_lines": 103153,
+   "late_lines_if": 41023,
+   "late_lines_avoided": 0
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "new_promise": 5,
+   "extra_days": 1,
+   "shipped_lines": 103153,
+   "late_lines_if": 20792,
+   "late_lines_avoided": 20231
+  },
+  {
+   "shipping_mode": "Standard Class",
+   "promised_days": 4,
+   "new_promise": 6,
+   "extra_days": 2,
+   "shipped_lines": 103153,
+   "late_lines_if": 0,
+   "late_lines_avoided": 41023
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+-- 01_staging.sql
+-- A typed view over the Polars-cleaned parquet file (one row per order line).
+-- Personal columns (masked e-mail/password, names, street) were already dropped in src/build.py.
+CREATE OR REPLACE VIEW stg_order_lines AS
+SELECT
+    order_item_id                      AS order_line_id,
+    order_id,
+    order_ts,
+    ship_ts,
+    CAST(order_ts AS DATE)             AS order_date,
+    CAST(ship_ts AS DATE)              AS ship_date,
+    type                               AS payment_type,
+    days_scheduled,
+    days_actual,
+    delivery_status,
+    late_delivery_risk,
+    order_status,
+    shipping_mode,
+    customer_id,
+    customer_segment,
+    customer_city,
+    customer_state,
+    customer_country,
+    market,
+    order_region,
+    order_country,
+    order_state,
+    order_city,
+    product_card_id,
+    product_name,
+    category_id,
+    category_name,
+    department_id,
+    department_name,
+    order_item_product_price           AS unit_price,
+    order_item_quantity                AS quantity,
+    sales                              AS gross_sales,
+    order_item_discount                AS discount_amount,
+    order_item_discount_rate           AS discount_rate,
+    order_item_total                   AS net_sales,
+    order_profit_per_order             AS profit,
+    order_item_profit_ratio            AS profit_ratio
+FROM read_parquet('data/staging/order_lines.parquet');

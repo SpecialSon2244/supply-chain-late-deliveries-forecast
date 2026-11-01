@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+*.duckdb
+*.duckdb.wal
+.DS_Store
+
+# Power BI fact table as CSV (about 29 MB). Rebuilt by `make powerbi`; the Parquet copy is committed.
+powerbi/model/fact_order_lines.csv

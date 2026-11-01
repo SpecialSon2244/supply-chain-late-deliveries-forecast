@@ -1,0 +1,4 @@
+Delivery outcome,Outcome order,Order lines,Net sales,Profit,Share of profit %,Margin %
+On time or early,1,73788,13562110.0,1666369.0,42.0,12.29
+Late,2,98977,18082555.0,2140052.0,53.9,11.83
+Cancelled,3,7754,1409737.0,160482.0,4.0,11.38

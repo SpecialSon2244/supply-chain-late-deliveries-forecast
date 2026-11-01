@@ -1,0 +1,5 @@
+Shipping mode,Mode order,Promised days,Avg actual days,Shipped lines,Late lines,Late %,On time %,Share of all late %
+Same Day,1,0,0.48,9293,4454,47.9,52.1,4.5
+First Class,2,1,2.0,26513,26513,100.0,0.0,26.8
+Second Class,3,2,3.99,33806,26987,79.8,20.2,27.3
+Standard Class,4,4,3.99,103153,41023,39.8,60.2,41.4

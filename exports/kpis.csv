@@ -1,0 +1,8 @@
+Sort,KPI,Value,Value label
+1,Order lines,180519.0,"180,519"
+2,Late (% of shipped lines),57.3,57.3%
+3,Avg days: promised vs actual,0.57,2.9 vs 3.5
+4,Cancelled lines,7754.0,"7,754"
+5,Profit (USD),3966903.0,$3.97M
+6,Profit at risk (late + cancelled),58.0,$2.30M (58%)
+7,Forecast WAPE: ETS vs seasonal naive,2.88,2.9% vs 6.8%

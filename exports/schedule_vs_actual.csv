@@ -1,0 +1,14 @@
+Shipping mode,Promised days,Actual days,Actual days label,Outcome,Shipped lines,Share of mode %
+Same Day,0,0,0 d,Within promise,4839,52.07
+Same Day,0,1,1 d,Late,4454,47.93
+First Class,1,2,2 d,Late,26513,100.0
+Second Class,2,2,2 d,Within promise,6819,20.17
+Second Class,2,3,3 d,Late,6759,19.99
+Second Class,2,4,4 d,Late,6759,19.99
+Second Class,2,5,5 d,Late,6772,20.03
+Second Class,2,6,6 d,Late,6697,19.81
+Standard Class,4,2,2 d,Within promise,20873,20.23
+Standard Class,4,3,3 d,Within promise,20719,20.09
+Standard Class,4,4,4 d,Within promise,20538,19.91
+Standard Class,4,5,5 d,Late,20231,19.61
+Standard Class,4,6,6 d,Late,20792,20.16

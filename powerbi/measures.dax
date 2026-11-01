@@ -1,0 +1,178 @@
+// DAX measures for the supply chain Power BI model.
+// Create a table "_Measures" (Home, Enter data, one blank column, then hide the column) and add
+// each measure below to it. Display folders are in the section headers.
+// Tables and relationships: see powerbi/BUILD_NOTES.md.
+// "Late" = shipped in more days than the shipping mode promises. Cancelled lines are never late
+// or on time, so rates use shipped lines as the base (same as the README and the Tableau workbook).
+
+// ===== Volume ==========================================================  folder: Volume
+Order Lines = COUNTROWS ( fact_order_lines )
+
+Orders = DISTINCTCOUNT ( fact_order_lines[order_id] )
+
+Shipped Lines =
+CALCULATE ( [Order Lines], fact_order_lines[is_cancelled] = FALSE () )
+
+Cancelled Lines =
+CALCULATE ( [Order Lines], fact_order_lines[is_cancelled] = TRUE () )
+
+Units = SUM ( fact_order_lines[quantity] )
+
+// ===== Delivery ========================================================  folder: Delivery
+Late Lines =
+CALCULATE ( [Order Lines], fact_order_lines[is_late] = TRUE () )
+
+On-time Lines =
+CALCULATE ( [Order Lines], fact_order_lines[is_on_time] = TRUE () )
+
+// Format: Percentage, 1 decimal. Expected overall: 57.3%
+Late % = DIVIDE ( [Late Lines], [Shipped Lines] )
+
+// Format: Percentage, 1 decimal. Expected overall: 42.7%
+On-time % = DIVIDE ( [On-time Lines], [Shipped Lines] )
+
+// Format: decimal, 2 decimals. Expected overall: 2.93 vs 3.50
+Avg Promised Days =
+CALCULATE ( AVERAGE ( fact_order_lines[days_scheduled] ), fact_order_lines[is_cancelled] = FALSE () )
+
+Avg Actual Days =
+CALCULATE ( AVERAGE ( fact_order_lines[days_actual] ), fact_order_lines[is_cancelled] = FALSE () )
+
+Avg Days Late (late lines) =
+CALCULATE ( AVERAGE ( fact_order_lines[delay_days] ), fact_order_lines[is_late] = TRUE () )
+
+// Share of all late lines that fall in the current filter (e.g. one shipping mode). Standard Class: 41.4%
+Share of All Late % =
+DIVIDE ( [Late Lines], CALCULATE ( [Late Lines], REMOVEFILTERS ( dim_shipping_mode ) ) )
+
+// ===== Money ===========================================================  folder: Money
+Gross Sales = SUM ( fact_order_lines[gross_sales] )
+
+Discount = SUM ( fact_order_lines[discount_amount] )
+
+Net Sales = SUM ( fact_order_lines[net_sales] )
+
+// Expected overall: $3,966,903
+Profit = SUM ( fact_order_lines[profit] )
+
+// Format: Percentage, 1 decimal
+Margin % = DIVIDE ( [Profit], [Net Sales] )
+
+Profit % of List Price = DIVIDE ( [Profit], [Gross Sales] )
+
+// Profit on lines that were late or cancelled. Expected overall: $2,300,534
+Profit at Risk =
+CALCULATE (
+    [Profit],
+    FILTER (
+        ALL ( fact_order_lines[is_late], fact_order_lines[is_cancelled] ),
+        fact_order_lines[is_late] = TRUE () || fact_order_lines[is_cancelled] = TRUE ()
+    )
+)
+
+// Expected overall: 58.0%
+Profit at Risk % = DIVIDE ( [Profit at Risk], [Profit] )
+
+Net Sales at Risk =
+CALCULATE (
+    [Net Sales],
+    FILTER (
+        ALL ( fact_order_lines[is_late], fact_order_lines[is_cancelled] ),
+        fact_order_lines[is_late] = TRUE () || fact_order_lines[is_cancelled] = TRUE ()
+    )
+)
+
+Loss-making Lines % =
+DIVIDE ( CALCULATE ( [Order Lines], fact_order_lines[is_loss] = TRUE () ), [Order Lines] )
+
+// ===== Time comparison =================================================  folder: Time
+// dim_date must be marked as a date table (Table tools, Mark as date table, column date).
+// Compare years only on the clean window (dim_date[in_comparable_window] = TRUE, slicer or page
+// filter): after the week of 2 Oct 2017 order volume drops by more than half (see README).
+
+Units PY = CALCULATE ( [Units], SAMEPERIODLASTYEAR ( dim_date[date] ) )
+
+// Format: Percentage, 1 decimal
+Units YoY % = DIVIDE ( [Units] - [Units PY], [Units PY] )
+
+Late % PY = CALCULATE ( [Late %], SAMEPERIODLASTYEAR ( dim_date[date] ) )
+
+// Percentage points
+Late % YoY (pp) = ( [Late %] - [Late % PY] ) * 100
+
+Profit PY = CALCULATE ( [Profit], SAMEPERIODLASTYEAR ( dim_date[date] ) )
+
+Profit YoY % = DIVIDE ( [Profit] - [Profit PY], [Profit PY] )
+
+Profit YTD = TOTALYTD ( [Profit], dim_date[date] )
+
+// Rolling 3 months, like mart_monthly_total in sql/05_marts.sql
+Late % Rolling 3M =
+CALCULATE (
+    [Late %],
+    DATESINPERIOD ( dim_date[date], MAX ( dim_date[date] ), -3, MONTH )
+)
+
+// ===== Forecast ========================================================  folder: Forecast
+// forecast_weekly has one row per series, week and model. Filter series with a slicer
+// (single select, default "All categories"). Training weeks have one row (model = "Actual");
+// each holdout week has one row per model (ETS, Naive, Seasonal naive), all carrying the actual.
+
+Actual Units (forecast table) =
+VAR train = CALCULATE ( SUM ( forecast_weekly[actual] ), forecast_weekly[model] = "Actual" )
+VAR holdout =
+    CALCULATE ( SUM ( forecast_weekly[actual] ), forecast_weekly[split] = "holdout", forecast_weekly[model] = "ETS" )
+RETURN train + holdout
+
+ETS Forecast =
+CALCULATE ( SUM ( forecast_weekly[forecast] ), forecast_weekly[model] = "ETS" )
+
+Naive Forecast =
+CALCULATE ( SUM ( forecast_weekly[forecast] ), forecast_weekly[model] = "Naive" )
+
+Seasonal Naive Forecast =
+CALCULATE ( SUM ( forecast_weekly[forecast] ), forecast_weekly[model] = "Seasonal naive" )
+
+ETS Lower 80 = CALCULATE ( SUM ( forecast_weekly[lower_80] ), forecast_weekly[model] = "ETS" )
+
+ETS Upper 80 = CALCULATE ( SUM ( forecast_weekly[upper_80] ), forecast_weekly[model] = "ETS" )
+
+// WAPE = sum of absolute errors / sum of actuals, over the 13 holdout weeks.
+// Format: Percentage, 2 decimals. Expected for "All categories": ETS 2.88%, seasonal naive 6.81%
+ETS WAPE % =
+VAR h =
+    FILTER ( forecast_weekly, forecast_weekly[split] = "holdout" && forecast_weekly[model] = "ETS" )
+RETURN
+    DIVIDE (
+        SUMX ( h, ABS ( forecast_weekly[actual] - forecast_weekly[forecast] ) ),
+        SUMX ( h, forecast_weekly[actual] )
+    )
+
+Seasonal Naive WAPE % =
+VAR h =
+    FILTER ( forecast_weekly, forecast_weekly[split] = "holdout" && forecast_weekly[model] = "Seasonal naive" )
+RETURN
+    DIVIDE (
+        SUMX ( h, ABS ( forecast_weekly[actual] - forecast_weekly[forecast] ) ),
+        SUMX ( h, forecast_weekly[actual] )
+    )
+
+// Positive = the forecast was too high on average
+ETS Bias % =
+VAR h =
+    FILTER ( forecast_weekly, forecast_weekly[split] = "holdout" && forecast_weekly[model] = "ETS" )
+RETURN
+    DIVIDE (
+        SUMX ( h, forecast_weekly[forecast] - forecast_weekly[actual] ),
+        SUMX ( h, forecast_weekly[actual] )
+    )
+
+// Mean absolute percentage error, week by week
+ETS MAPE % =
+AVERAGEX (
+    FILTER ( forecast_weekly, forecast_weekly[split] = "holdout" && forecast_weekly[model] = "ETS" ),
+    DIVIDE ( ABS ( forecast_weekly[actual] - forecast_weekly[forecast] ), forecast_weekly[actual] )
+)
+
+// How much lower the ETS error is than the seasonal naive error (percentage points)
+ETS Gain vs Seasonal Naive (pp) = ( [Seasonal Naive WAPE %] - [ETS WAPE %] ) * 100

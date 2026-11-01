@@ -1,0 +1,37 @@
+series,model,holdout_weeks,holdout_start,holdout_end,aicc,wape_pct,mape_pct,bias_pct
+All categories,"ETS, AICc-selected: ETS(A,N,N)",13,2017-07-03,2017-09-25,1568.4,2.88,2.86,0.31
+All categories,Naive (last week),13,2017-07-03,2017-09-25,,3.14,3.14,1.14
+All categories,4-week moving average,13,2017-07-03,2017-09-25,,3.38,3.28,-3.29
+All categories,"ETS (not selected): ETS(A,N,A) s=52",13,2017-07-03,2017-09-25,1576.0,3.52,3.56,1.91
+All categories,"ETS (not selected): ETS(A,Ad,N)",13,2017-07-03,2017-09-25,1571.2,4.53,4.43,-4.53
+All categories,Seasonal naive (same week last year),13,2017-07-03,2017-09-25,,6.81,6.96,6.66
+Cardio Equipment,"ETS (not selected): ETS(A,Ad,N)",13,2017-07-03,2017-09-25,1265.4,8.59,8.25,-5.47
+Cardio Equipment,"ETS, AICc-selected: ETS(A,N,N)",13,2017-07-03,2017-09-25,1259.5,8.69,8.33,-5.73
+Cardio Equipment,Naive (last week),13,2017-07-03,2017-09-25,,8.83,8.45,-6.09
+Cardio Equipment,"ETS (not selected): ETS(A,N,A) s=52",13,2017-07-03,2017-09-25,1292.5,9.8,9.27,-9.1
+Cardio Equipment,4-week moving average,13,2017-07-03,2017-09-25,,10.46,9.86,-9.67
+Cardio Equipment,Seasonal naive (same week last year),13,2017-07-03,2017-09-25,,10.58,10.67,-0.18
+Cleats,"ETS (not selected): ETS(A,Ad,N)",13,2017-07-03,2017-09-25,1345.7,5.27,5.24,0.28
+Cleats,"ETS, AICc-selected: ETS(A,N,N)",13,2017-07-03,2017-09-25,1340.3,5.32,5.3,0.48
+Cleats,Naive (last week),13,2017-07-03,2017-09-25,,5.72,5.5,-3.52
+Cleats,Seasonal naive (same week last year),13,2017-07-03,2017-09-25,,7.01,7.03,1.38
+Cleats,"ETS (not selected): ETS(A,N,A) s=52",13,2017-07-03,2017-09-25,1349.9,10.01,10.04,1.79
+Cleats,4-week moving average,13,2017-07-03,2017-09-25,,10.11,9.73,-10.03
+Indoor/Outdoor Games,Naive (last week),13,2017-07-03,2017-09-25,,6.26,6.41,-0.81
+Indoor/Outdoor Games,"ETS (not selected): ETS(A,Ad,N)",13,2017-07-03,2017-09-25,1345.5,7.97,8.53,5.75
+Indoor/Outdoor Games,4-week moving average,13,2017-07-03,2017-09-25,,8.07,7.96,-5.53
+Indoor/Outdoor Games,"ETS (not selected): ETS(A,N,N)",13,2017-07-03,2017-09-25,1340.4,8.21,8.78,6.18
+Indoor/Outdoor Games,"ETS, AICc-selected: ETS(A,N,A) s=52",13,2017-07-03,2017-09-25,1307.5,12.49,13.06,4.04
+Indoor/Outdoor Games,Seasonal naive (same week last year),13,2017-07-03,2017-09-25,,13.63,13.76,2.48
+Shop By Sport,"ETS, AICc-selected: ETS(A,N,N)",13,2017-07-03,2017-09-25,1245.7,7.36,7.66,1.51
+Shop By Sport,4-week moving average,13,2017-07-03,2017-09-25,,7.39,7.66,1.03
+Shop By Sport,"ETS (not selected): ETS(A,Ad,N)",13,2017-07-03,2017-09-25,1250.0,7.44,7.66,0.55
+Shop By Sport,Naive (last week),13,2017-07-03,2017-09-25,,9.35,9.99,6.81
+Shop By Sport,"ETS (not selected): ETS(A,N,A) s=52",13,2017-07-03,2017-09-25,1260.1,10.08,10.07,0.47
+Shop By Sport,Seasonal naive (same week last year),13,2017-07-03,2017-09-25,,15.41,15.29,-1.71
+Women's Apparel,4-week moving average,13,2017-07-03,2017-09-25,,6.44,6.73,2.04
+Women's Apparel,"ETS (not selected): ETS(A,Ad,N)",13,2017-07-03,2017-09-25,1355.3,6.56,6.75,0.49
+Women's Apparel,"ETS, AICc-selected: ETS(A,N,N)",13,2017-07-03,2017-09-25,1349.0,6.57,6.75,0.36
+Women's Apparel,Seasonal naive (same week last year),13,2017-07-03,2017-09-25,,8.24,8.66,4.58
+Women's Apparel,"ETS (not selected): ETS(A,N,A) s=52",13,2017-07-03,2017-09-25,1368.8,12.4,12.86,3.76
+Women's Apparel,Naive (last week),13,2017-07-03,2017-09-25,,15.77,16.45,15.77
