@@ -9,3 +9,4 @@ data/
 
 # Power BI fact table as CSV (about 29 MB). Rebuilt by `make powerbi`; the Parquet copy is committed.
 powerbi/model/fact_order_lines.csv
+*.whl
